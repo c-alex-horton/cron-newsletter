@@ -31,7 +31,6 @@ const getRedditNews = async () => {
         return headlines
     } catch (error) {
         console.log(error);
-        process.exit()
     }
 
 
