@@ -1,0 +1,22 @@
+<mjml>
+    <mj-body>
+        <mj-section>
+            <mj-column>
+            <mj-text>
+                <h1>Newsletter</h1>
+            </mj-text>
+                {{#each sections}}
+                        <mj-text>
+                            <h2>{{this.name}}</h2>
+                        </mj-text>
+                        {{#each this.posts}}
+                            <mj-text>
+                                <h3>{{this.title}}</h3>
+                                <a href="{{this.link}}">Link</a>
+                            </mj-text>
+                        {{/each}}
+                {{/each}}
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>

@@ -1,10 +1,9 @@
 const puppeteer = require('puppeteer')
-const url = 'https://www.reddit.com/r/news'
 const fs = require('fs')
 const cheerio = require('cheerio');
 
 
-const getRedditNews = async () => {
+const scrapeReddit = async (url) => {
     try {
         const browser = await puppeteer.launch()
         const page = await browser.newPage();
@@ -36,5 +35,5 @@ const getRedditNews = async () => {
 
 }
 
-module.exports = getRedditNews
+module.exports = scrapeReddit
 
